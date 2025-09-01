@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_data</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Welcom {{name}}</h1>
+            {%  if is_topper %}
+                <p>your are topper very good</p>
+            {%else%}
+                <p>need to word hard</p>
+            {%endif%}
+        
+        <h3>Your subjects</h3>
+        <ul>
+            {%for sub in subject%}
+            <li>{{sub}}</li>
+            {%endfor%}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,10 +10,72 @@
         <h1>Submit the form pleas</h1>
         <form method = 'post'>
             <label for="name">Name :</label>
-            <input type="text" name="name" id="name",value = 'hassan'>
+            <input type="text" name="username" id="username",value = 'hassan'>
+            <input type="text" name="password" id="password",value = '123'>
             <input type="submit" value="submit">
 
         </form>
     </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-box input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+    <form action="{{ url_for('login_home') }}" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
 </body>
 </html>
